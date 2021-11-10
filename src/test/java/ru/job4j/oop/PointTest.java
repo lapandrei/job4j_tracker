@@ -12,7 +12,7 @@ public class PointTest {
         Point b = new Point(0, 3, 0);
         double result = a.distance3d(b);
         double expected = 4.2;
-        assertThat(result,closeTo(expected,0.1));
+        assertThat(result, closeTo(expected, 0.1));
     }
 
     @Test
@@ -21,6 +21,6 @@ public class PointTest {
         Point b = new Point(1, 2, -2);
         double result = a.distance3d(b);
         double expected = 5.4;
-        assertThat(result,closeTo(expected,0.1));
+        assertThat(result , closeTo(expected, 0.1));
     }
 }
