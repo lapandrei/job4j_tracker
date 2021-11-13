@@ -23,4 +23,22 @@ public class PointTest {
         double expected = 5.4;
         assertThat(result, closeTo(expected, 0.1));
     }
+
+    @Test
+    public void distance() {
+        Point a = new Point(3, 0);
+        Point b = new Point(3, 3);
+        double rsl = a.distance(b);
+        double expected = 3;
+        assertThat(rsl, closeTo(expected, 0.1));
+    }
+
+    @Test
+    public void distanceOne() {
+        Point a = new Point(3, 0);
+        Point b = new Point(-3, 3);
+        double rsl = a.distance(b);
+        double expected = 6.7;
+        assertThat(rsl, closeTo(expected, 0.1));
+    }
 }
