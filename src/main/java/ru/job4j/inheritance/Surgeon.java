@@ -17,8 +17,8 @@ public class Surgeon extends Doctor {
         return this.medicineRating;
     }
 
-    public Pacient removeAppendicitis(Pacient pacient) {
-        Pacient ob = new Pacient();
-        return ob;
+    public int removeAppendicitis(int pacient) {
+        int rsl = pacient;
+        return rsl;
     }
 }

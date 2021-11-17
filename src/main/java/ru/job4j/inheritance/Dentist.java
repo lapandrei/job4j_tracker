@@ -17,8 +17,8 @@ public class Dentist extends Doctor {
         return this.medicineRating;
     }
 
-    public Pacient whitenTeeth(Pacient pacient) {
-        Pacient ob = new Pacient();
-        return ob;
+    public int whitenTeeth(int pacient) {
+        int rsl = pacient;
+        return pacient;
     }
 }
