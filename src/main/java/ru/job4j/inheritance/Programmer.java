@@ -4,10 +4,6 @@ public class Programmer extends Engineer {
 
     private boolean fortranDeveloper;
 
-    public Programmer() {
-
-    }
-
     public Programmer(String name, String surname, String education, String birthday, String work,
                       boolean fortranDeveloper) {
         super(name, surname, education, birthday, work);
