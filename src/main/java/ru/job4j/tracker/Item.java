@@ -7,6 +7,10 @@ public class Item {
     private String name;
     private LocalDateTime created = LocalDateTime.now();
 
+    public Item() {
+
+    }
+
    public Item(String name) {
        this.name = name;
    }
