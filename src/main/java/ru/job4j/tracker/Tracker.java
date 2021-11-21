@@ -50,22 +50,4 @@ public class Tracker {
         }
         return rsl;
     }
-
-    public static void main(String[] args) {
-        Tracker tracker = new Tracker();
-        Item first = new Item("First");
-        Item second = new Item("Second");
-        tracker.add(first);
-        tracker.add(second);
-        tracker.add(new Item("First"));
-        tracker.add(new Item("Second"));
-        tracker.add(new Item("First"));
-        Item[] result = tracker.findAll();
-        /*for (int i = 0; i < 5; i++) {
-            System.out.println(result[i].getName());
-
-        }*/
-        String key = first.getName();
-        System.out.println(key);
-    }
 }
