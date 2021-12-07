@@ -43,7 +43,6 @@ public class StartUITest {
         Output out = new StubOutput();
         Tracker tracker = new Tracker();
         Item item = tracker.add(new Item("Deleted item"));
-        /* Входные данные должны содержать ID добавленной заявки item.getId() */
         String idNew = String.valueOf(item.getId());
         Input in = new StubInput(
                 new String[] {"0", idNew, "1"}
