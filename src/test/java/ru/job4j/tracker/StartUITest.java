@@ -55,7 +55,6 @@ public class StartUITest {
         assertNull(tracker.findById(item.getId()));
     }
 
-
     @Test
     public void whenReplaceItemTestOutputIsSuccessfully() {
         Output out = new StubOutput();
