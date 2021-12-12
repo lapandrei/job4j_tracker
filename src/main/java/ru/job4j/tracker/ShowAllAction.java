@@ -9,7 +9,7 @@ public class ShowAllAction implements UserAction {
 
     @Override
     public String name() {
-        return "Show all Items";
+        return "Show all items";
     }
 
     @Override
@@ -18,7 +18,7 @@ public class ShowAllAction implements UserAction {
         Item[] items = tracker.findAll();
         if (items.length > 0) {
             for (Item item : items) {
-                System.out.println(item);
+                out.println(item);
             }
         } else {
             out.println("Хранилище еще не содержит заявок");

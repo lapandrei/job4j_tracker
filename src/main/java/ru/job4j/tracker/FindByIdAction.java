@@ -9,12 +9,12 @@ public class FindByIdAction implements UserAction {
 
     @Override
     public String name() {
-        return "Find Item by id";
+        return "Find items by id";
     }
 
     @Override
     public boolean execute(Input input, Tracker tracker) {
-        out.println("=== Find item by id ===");
+        out.println("=== Find items by id ===");
         int id = input.askInt("Enter id: ");
         Item item = tracker.findById(id);
         if (item != null) {
