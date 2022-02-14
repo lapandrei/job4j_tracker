@@ -1,7 +1,10 @@
 package ru.job4j.tracker;
 
+import ru.job4j.collection.Account;
+
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.Objects;
 
 public class Item {
     private static final DateTimeFormatter FORMATTER =
@@ -47,5 +50,22 @@ public class Item {
     public String toString() {
         return "Item{" + "id=" + id + ", name='" + name + '\''
                 + ", created=" + created.format(FORMATTER) + '}';
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null || getClass() != obj.getClass()) {
+            return false;
+        }
+        Item item = (Item) obj;
+        return Objects.equals(name, item.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name);
     }
 }
