@@ -11,8 +11,8 @@ public class JobAscByNameTest {
 
     @Test
     public void compare() {
-        Comparator<Job> JobAscByName = new JobAscByName();
-        int rsl = JobAscByName.compare(new Job("Igor", 1), new Job("Andrei", 2));
+        Comparator<Job> jobAscByName = new JobAscByName();
+        int rsl = jobAscByName.compare(new Job("Igor", 1), new Job("Andrei", 2));
         assertThat(rsl, greaterThan(0));
     }
 
