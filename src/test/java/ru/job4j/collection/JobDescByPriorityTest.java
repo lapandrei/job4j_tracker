@@ -10,7 +10,7 @@ import static org.junit.Assert.*;
 public class JobDescByPriorityTest {
 
     @Test
-    public void compare() {
+    public void whenComparatorDescByPriority() {
         Comparator<Job> jobDescByPriority = new JobDescByPriority();
         int rsl = jobDescByPriority.compare(new Job("Andrei", 1), new Job("Vladimir", 2));
         assertThat(rsl, greaterThan(0));
