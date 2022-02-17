@@ -9,7 +9,7 @@ import java.util.Map;
  * Класс описывает работу банковской службы, которая добавляет
  * пользователей и их банковские счета, и может переводить деньги
  * со счета на счет
- * @author STAS KOROBEYNIKOV
+ * @author ANDREY LAPIKHIN
  * @version 1.0
  */
 public class BankService {
@@ -93,7 +93,7 @@ public class BankService {
      * @param destPassport данные пользователя, которому переводятся средства
      * @param destRequisite данные счета репициента
      * @param amount количество денег, которые нужно перевести
-     * @return
+     * @return возвращает true при успешном выполнении, иначе false
      */
     public boolean transferMoney(String srcPassport, String srcRequisite,
                                  String destPassport, String destRequisite, double amount) {
