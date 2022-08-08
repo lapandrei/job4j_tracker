@@ -15,7 +15,7 @@ public class PhoneDictionary {
                 .or(s -> s.getSurname().equals(key)).or(s -> s.getPhone().equals(key))
                 .or(s -> s.getAddress().equals(key));
         ArrayList<Person> result = new ArrayList<>();
-        for (Person value : persons) {
+        for (var value : persons) {
             if (combine.test(value)) {
                 result.add(value);
             }
