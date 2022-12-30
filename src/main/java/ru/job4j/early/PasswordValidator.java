@@ -12,19 +12,22 @@ public class PasswordValidator {
         if (password.length() <= 8 || password.length() >= 32) {
             throw new IllegalArgumentException("Password should be length [8, 32]");
         }
-        for (int i = 0; i < password.length(); i++) {
-            if (Character.isUpperCase(password.charAt(i))) {
+        for (char value : password.toCharArray()) {
+            if (Character.isUpperCase(value)) {
                 upperCase = true;
             }
-            if (Character.isLowerCase(password.charAt(i))) {
+            if (Character.isLowerCase(value)) {
                 lowerCase = true;
             }
-            if (Character.isDigit(password.charAt(i))) {
+            if (Character.isDigit(value)) {
                 digit = true;
             }
-            if (!Character.isDigit(password.charAt(i))
-                    && !Character.isAlphabetic(password.charAt(i))) {
+            if (!Character.isDigit(value)
+                    && !Character.isAlphabetic(value)) {
                 specialSymbol = true;
+            }
+            if (upperCase && lowerCase && digit && specialSymbol) {
+                break;
             }
         }
         if (!upperCase) {
@@ -43,10 +46,12 @@ public class PasswordValidator {
                     + "at least one special symbol");
         }
         String string = password.toLowerCase();
-        if (string.contains("qwerty") || string.contains("12345") || string.contains("password")
-                || string.contains("admin") || string.contains("user")) {
-            throw new IllegalArgumentException("Password shouldn't contain substrings:"
-                    + " qwerty, 12345, password, admin, user");
+        String[] strings = {"qwerty", "password", "admin", "user", "12345"};
+        for (String value : strings) {
+            if (string.contains(value)) {
+                throw new IllegalArgumentException("Password shouldn't contain substrings:"
+                        + " qwerty, 12345, password, admin, user");
+            }
         }
         return password;
     }
